@@ -1,28 +1,39 @@
-.section-container {
-  width: 1300px;
+/* Clean App specific styles and animations */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
 }
-.title,
-.para {
-  font-kerning: none;
-  -webkit-text-rendering: optimizeSpeed;
-  text-rendering: optimizeSpeed;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+
+.ambient-glow-1 {
+  position: fixed;
+  top: -15%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
 }
-@media only screen and (max-width: 1600px) {
-  .section-container {
-    width: 1200px;
-    max-width: calc(100% - 160px);
-  }
+
+.ambient-glow-2 {
+  position: fixed;
+  bottom: -20%;
+  right: -10%;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(90px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
 }
-@media only screen and (max-width: 1400px) {
-  .section-container {
-    width: 900px;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .section-container {
-    width: 500px;
-    max-width: var(--cWidth);
-  }
+
+section {
+  position: relative;
+  z-index: 1;
 }
